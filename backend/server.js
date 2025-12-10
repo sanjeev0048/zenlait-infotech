@@ -20,8 +20,8 @@ app.use(express.json());
 
 // MongoDB Connect
 mongoose
-  .connect(process.env.MONGO_URI, { dbName: "zenelait" })
-  .then(() => console.log("✅ MongoDB connected"))
+ mongoose.connect(process.env.MONGO_URI, { dbName: "zenelaitdb" })
+.then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ DB Error:", err));
 
 // Auth Middleware
